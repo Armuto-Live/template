@@ -1,6 +1,11 @@
 import { createTheme,responsiveFontSizes } from "@mui/material";
 
 let theme=createTheme({
+    typography:{
+        h1:{
+            fontSize:"3rem",
+        },
+    },
     components:{
         MuiButton:{
             styleOverrides:{

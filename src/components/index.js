@@ -1,3 +1,5 @@
-export * from './Navbar/Desktop/Navbar';
-export { default as ResponsiveAppBar } from './Navbar/ResponsiveAppBar';
+export * from './Navbar/desktop/FabWhatsapp';
+export * from './Navbar/desktop/Footer';
+export * from './Navbar/desktop/Main';
+export * from './Navbar/desktop/Navbar';
 export * from './index';
