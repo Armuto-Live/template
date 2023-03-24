@@ -15,7 +15,7 @@ const CustomLogo=styled('img')((theme)=>({
 
 export const Main = () => {
   return (
-    <ContainerMain container justifyContent="center">
+    <ContainerMain container justifyContent="center" position="relative">
         <Grid item  xs={11} sm={11} md={10} lg={9} xl={8}>
             <Grid container justifyContent="space-between" alignItems="center"  height="100%">
                 <Grid item xs={12} md={8} lg={8}  xl={8}>

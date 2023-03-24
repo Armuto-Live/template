@@ -1,24 +1,30 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-import { Grid, IconButton, Typography } from '@mui/material'
+import { Link, NavLink } from 'react-router-dom';
+import { Grid, IconButton, Typography,Badge } from '@mui/material'
 
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
 import { FabWhatsapp } from './FabWhatsapp';
+
+import LogoHome from '../../../assets/logo.svg'
 export const Navbar = () => {
   return (
     <>
-    <Grid container justifyContent="center" height="60px" alignItems="center">
+    <Grid container justifyContent="center" height="60px" alignItems="center" position="fixed" zIndex={1} bgcolor="lightskyblue">
         <Grid item xs={11} sm={11} md={10} lg={9} xl={8}>
-            <Grid container justifyContent="space-between" alignItems="baseline">
-                <Grid item xl={1}>
-                    <Typography variant="h3">Logo</Typography>
+            <Grid container alignItems="center" justifyContent="space-between">
+                <Grid item xs={3}>
+                    <NavLink to={`/`}>
+                        <img src={LogoHome} alt="" />
+                    </NavLink>
                 </Grid>
-                <Grid item xl={11} height="100%">
+                <Grid item xs={9} height="100%">
                     <Grid container justifyContent="flex-end">
                         <NavLink to={`/cart`}>
-                            <IconButton>
-                                <LocalGroceryStoreOutlinedIcon/>
-                            </IconButton>
+                            <Badge badgeContent={2} color="primary">
+                                <IconButton>
+                                    <LocalGroceryStoreOutlinedIcon/>
+                                </IconButton>
+                            </Badge>
                         </NavLink>
                         <FabWhatsapp/>
                     </Grid>

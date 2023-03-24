@@ -1,7 +1,11 @@
 import React from 'react'
+import { Navbar,Footer } from '../components'
 
 export const Cart = () => {
   return (
-    <div>Cart</div>
+    <>
+      <Navbar/>
+      <Footer/>
+    </>
   )
 }
