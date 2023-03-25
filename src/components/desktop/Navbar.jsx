@@ -1,11 +1,13 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
+// styles
 import { Grid, IconButton, Typography,Badge } from '@mui/material'
-
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
+
+//components
 import { FabWhatsapp } from './FabWhatsapp';
 
-import LogoHome from '../../../assets/logo.svg'
+import LogoHome from '../../assets/logo.svg'
+
 export const Navbar = () => {
   return (
     <>

@@ -1,17 +1,11 @@
-import React from 'react'
-import { Grid,styled, Typography,Box } from '@mui/material'
-import Logo from '../../../assets/Adidas_Logo.png'
+// styled components
+import { Grid, Typography,Box } from '@mui/material'
+import { ContainerMain,CustomLogo } from '../../styles'
 
-const ContainerMain=styled(Grid)((theme)=>({
-    background:"#eee",
-    height:"39rem",
-    padding:"4.2% 0",
-}))
+//components
 
-const CustomLogo=styled('img')((theme)=>({
-    display:"flex",
-    height:"20vh",
-  }))
+//assets
+import Logo from '../../assets/Adidas_Logo.png'
 
 export const Main = () => {
   return (

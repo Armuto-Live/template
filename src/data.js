@@ -135,4 +135,12 @@ export const products=[
         img:"https://i.ibb.co/HPsDb0J/popular-12.jpg",
         price:12,
     },
+    {
+        id:13,
+        title:"asd",
+        type:"aea",
+        description:"asd",
+        img:"https://i.ibb.co/HPsDb0J/popular-12.jpg",
+        price:111,
+    },
 ]

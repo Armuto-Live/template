@@ -12,7 +12,7 @@ export const FabWhatsapp = () => {
         <Grid item xl={12}>
           <Grid container justifyContent="flex-end" alignItems="flex-start">
             <Grid item position="fixed" bottom="2rem" right="3rem">
-                <Link href="https://api.whatsapp.com/send?phone=+51974263772&text=hola">
+                <Link href="https://api.whatsapp.com/send?phone=+51974263772&text=hola" target="_blank">
                   <Fab color="success">
                     <WhatsAppIcon sx={{color:"white"}}/>
                   </Fab>
