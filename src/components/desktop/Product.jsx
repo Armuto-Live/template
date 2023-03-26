@@ -1,4 +1,6 @@
 import React from "react";
+import accounting from "accounting";
+// mui components
 import {
   CardHeader,
   CardMedia,
@@ -6,10 +8,13 @@ import {
   CardActions,
   IconButton,
   Typography,
+  Box,
 } from "@mui/material";
+
+// mui icons
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
-// styles
+// styles components
 import { CardProduct } from "../../styles/index";
 
 export const Product = ({
@@ -19,7 +24,7 @@ export const Product = ({
     <>
       <CardProduct>
         <CardHeader
-          action={<Typography variant="h6">{price}</Typography>}
+          action={<Typography variant="h6">{accounting.formatMoney(price,"S/.")}</Typography>}
           title={title}
           subheader={type}
         />
@@ -29,10 +34,16 @@ export const Product = ({
             {description}
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
+        <CardActions sx={{justifyContent:"space-around"}}>
           <IconButton aria-label="add to favorites">
             <AddShoppingCartIcon />
           </IconButton>
+          <Box display="flex">
+            <input type="radio" value="unidad"/>
+            <p>Unidad</p>
+            <input type="radio" value="unidad"/>
+            <p>Paquete</p>
+          </Box>
         </CardActions>
       </CardProduct>
     </>

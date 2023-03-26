@@ -7,24 +7,31 @@ import axios from "axios"
 export const ProductState=(props)=>{
     const initialState={
         products:[],
-        selectedProducts:null
+        selectedProduct:null
     }
 
     const [state, dispatch] = useReducer(ProductsReducer, initialState);
 
     const getProducts= async ()=>{
         const res = await axios.get('https://641fbbe425cb6572103c73ea.mockapi.io/products');
-        console.log(res);
+        dispatch({
+            type:'GET_PRODUCTS',
+            payload:res.data,
+        })
     }
     
     const getProduct= async(id)=>{
-        const res= await axios.get('https://641fbbe425cb6572103c73ea.mockapi.io/products/'+id)
+        const res= await axios.get('https://641fbbe425cb6572103c73ea.mockapi.io/products/'+id);
+        dispatch({
+            type:"GET_PRODUCT",
+            payload:res.data,
+        })
     }
     return(
         <ProductContext.Provider value={
             {
                 products:state.products,
-                selectedProducts:state.selectedProducts,
+                selectedProduct:state.selectedProduct,
                 getProducts,
                 getProduct,
             }
