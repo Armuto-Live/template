@@ -1,15 +1,16 @@
 import { Routes,Route } from "react-router-dom"
 import { Home,Cart } from "./pages/index"
+import { ProductState } from "./context/products/ProductsState"
 
 function App() {
 
   return (
-    <div className="App">
+    <ProductState>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
-    </div>
+    </ProductState>
   )
 }
 

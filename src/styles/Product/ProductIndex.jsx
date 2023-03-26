@@ -5,10 +5,11 @@ export const CardProduct=styled(Card)((theme)=>({
     border:"1px solid black",
     borderRadius:"10px",
     boxShadow:"10px 10px 20px #5e6066 , -10px -10px 20px #ffffff",
-    margin:"25px 10px",
+    margin:"0 8px",
+    width:"90%",
+    transition:"all 0.2s ease",
     ':hover':{
-        background:"red",
-        width:"350px",
-        Width:"100%",
+        border:"4px solid red",
+        transform:"scale(1.02)",
     }
 }))
