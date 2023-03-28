@@ -1,7 +1,6 @@
 import React, { useReducer } from "react"
 import { ProductContext } from "./ProductsContext";
 import { ProductsReducer } from "./ProductsReducer";
-
 import axios from "axios"
 
 export const ProductState=(props)=>{
@@ -9,11 +8,18 @@ export const ProductState=(props)=>{
         products:[],
         selectedProduct:null
     }
-
     const [state, dispatch] = useReducer(ProductsReducer, initialState);
 
+    const TOKEN="GCSQAVKDCT20GUACJAOT76TMDAZFZ6GAI3XCG";
+    const axiosInstance=axios.create({
+        headers:{
+            'Authorization':'Bearer '+TOKEN,
+        }
+    })
+
     const getProducts= async ()=>{
-        const res = await axios.get('https://641fbbe425cb6572103c73ea.mockapi.io/products');
+        const res = await axiosInstance.get('https://api.babasdevel.com/invoice/range/1/10/');
+        console.log(res);
         dispatch({
             type:'GET_PRODUCTS',
             payload:res.data,

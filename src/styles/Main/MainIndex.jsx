@@ -12,7 +12,6 @@ export const MainIndex = () => {
 }
 
 export const  ContainerMain=styled(Grid)((theme)=>({
-  background:"rgb(238,174,202)",
   background: "radial-gradient(circle, rgba(174,184,236,1) 0%, rgba(69,190,198,1) 100%)",
   height:"39rem",
   padding:"4.2% 0",

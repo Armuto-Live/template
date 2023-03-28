@@ -7,9 +7,7 @@ export const CardProduct=styled(Card)((theme)=>({
     boxShadow:"10px 10px 20px #5e6066 , -10px -10px 20px #ffffff",
     margin:"0 8px",
     width:"90%",
-    transition:"all 0.2s ease",
     ':hover':{
         border:"4px solid red",
-        transform:"scale(1.02)",
     }
 }))

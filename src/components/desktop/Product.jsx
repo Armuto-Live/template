@@ -1,5 +1,8 @@
 import React from "react";
 import accounting from "accounting";
+
+import Image from '../../assets/1g.png'
+
 // mui components
 import {
   CardHeader,
@@ -17,20 +20,26 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 // styles components
 import { CardProduct } from "../../styles/index";
 
-export const Product = ({
-  product: { title, type, img, description, price },
+export const Product = (
+  {
+  product: { titulo, stock,images,description, price:{listPrice} },
 }) => {
+  const selectFruta=images.map(fruta=>(
+      // "https://api.babasdevel.com/invoice"+fruta
+      fruta
+    ))
+  console.log(typeof(selectFruta))
   return (
     <>
       <CardProduct>
         <CardHeader
-          action={<Typography variant="h6">{accounting.formatMoney(price,"S/.")}</Typography>}
-          title={title}
-          subheader={type}
+          action={<Typography variant="h7">{accounting.formatMoney(listPrice,"S/.")}</Typography>}
+          title={<Typography variant="h5">{titulo}</Typography>}
+          subheader={`Stock: ${stock}`}
         />
-        <CardMedia component="img" height="194" image={img} alt="Paella dish" />
+        <CardMedia component="img" height="194" image={""} alt={titulo} />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography color="text.secondary">
             {description}
           </Typography>
         </CardContent>
