@@ -1,13 +1,12 @@
 import { Box,styled,Card} from "@mui/material"
 
 export const CardProduct=styled(Card)((theme)=>({
-    background:"#F7FAFC",
-    border:"1px solid black",
+    background:"#fff",
     borderRadius:"10px",
-    boxShadow:"10px 10px 20px #5e6066 , -10px -10px 20px #ffffff",
     margin:"0 8px",
     width:"90%",
+    border:"0.1rem solid #eee",
     ':hover':{
-        border:"4px solid red",
+        border:".1rem solid rgb(238,129,129)",
     }
 }))

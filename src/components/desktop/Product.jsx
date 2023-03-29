@@ -1,7 +1,7 @@
 import React from "react";
 import accounting from "accounting";
 
-import Image from '../../assets/1g.png'
+import ImageDefault from '../../assets/1g.png'
 
 // mui components
 import {
@@ -11,7 +11,7 @@ import {
   CardActions,
   IconButton,
   Typography,
-  Box,
+  Box, Button,
 } from "@mui/material";
 
 // mui icons
@@ -24,26 +24,29 @@ export const Product = (
   {
   product: { titulo, stock,images,description, price:{listPrice} },
 }) => {
-  const selectFruta=images.map(fruta=>(
-      // "https://api.babasdevel.com/invoice"+fruta
-      fruta
-    ))
-  console.log(typeof(selectFruta))
+
+  let link="https://facturadorbabas.com";
+  let Image=link+images[0];
+  if(images[0]==undefined){
+    Image=ImageDefault;
+  }
   return (
     <>
-      <CardProduct>
+      <CardProduct sx={{display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
         <CardHeader
-          action={<Typography variant="h7">{accounting.formatMoney(listPrice,"S/.")}</Typography>}
-          title={<Typography variant="h5">{titulo}</Typography>}
+          action={<Typography variant="h6" fontWeight="500">{accounting.formatMoney(listPrice,"S/.")}</Typography>}
+          title={<Typography variant="h5" color="primary" fontWeight="700" >{titulo}</Typography>}
           subheader={`Stock: ${stock}`}
         />
-        <CardMedia component="img" height="194" image={""} alt={titulo} />
+        <Box display="flex" justifyContent="center">
+          <CardMedia component="img" height="194px" image={Image} alt={titulo}  />
+        </Box>
         <CardContent>
           <Typography color="text.secondary">
             {description}
           </Typography>
         </CardContent>
-        <CardActions sx={{justifyContent:"space-around"}}>
+        <CardActions sx={{justifyContent:"space-between"}}>
           <IconButton aria-label="add to favorites">
             <AddShoppingCartIcon />
           </IconButton>

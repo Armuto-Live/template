@@ -1,6 +1,11 @@
 import { createTheme,responsiveFontSizes } from "@mui/material";
 
 let theme=createTheme({
+    palette:{
+        primary:{
+            main:"#ee8181",
+        }
+    },
     typography:{
         h1:{
             fontSize:"3rem",

@@ -8,10 +8,12 @@ import { FabWhatsapp } from './FabWhatsapp';
 
 import LogoHome from '../../assets/logo.svg'
 
+import { NavbarContainer } from '../../styles';
+
 export const Navbar = () => {
   return (
     <>
-    <Grid container justifyContent="center" height="60px" alignItems="center" position="fixed" zIndex={1} bgcolor="lightskyblue">
+    <NavbarContainer container justifyContent="center" height="60px" alignItems="center" position="fixed" zIndex={1} bgcolor="#fff">
         <Grid item xs={11} sm={11} md={10} lg={9} xl={8}>
             <Grid container alignItems="center" justifyContent="space-between">
                 <Grid item xs={3}>
@@ -33,7 +35,7 @@ export const Navbar = () => {
                 </Grid>
             </Grid>
         </Grid>
-    </Grid>
+    </NavbarContainer>
     </>
   )
 }

@@ -18,7 +18,7 @@ export const ProductState=(props)=>{
     })
 
     const getProducts= async ()=>{
-        const res = await axiosInstance.get('https://api.babasdevel.com/invoice/range/1/10/');
+        const res = await axiosInstance.get('https://api.babasdevel.com/invoice/range/1/15/');
         console.log(res);
         dispatch({
             type:'GET_PRODUCTS',
