@@ -10,3 +10,7 @@ export const CardProduct=styled(Card)((theme)=>({
         border:".1rem solid rgb(238,129,129)",
     }
 }))
+
+export const Img=styled('img')((theme)=>({
+  width: "50%",
+}))

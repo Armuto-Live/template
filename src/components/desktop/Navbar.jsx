@@ -1,4 +1,9 @@
 import {NavLink } from 'react-router-dom';
+
+//Context
+import { useContext } from 'react';
+import { DataContext } from '../../context/Context';
+
 // styles
 import { Grid, IconButton, Typography,Badge } from '@mui/material'
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
@@ -8,9 +13,13 @@ import { FabWhatsapp } from './FabWhatsapp';
 
 import LogoHome from '../../assets/logo.svg'
 
+//styled components
 import { NavbarContainer } from '../../styles';
 
+
 export const Navbar = () => {
+const {totalCountProduct}=useContext(DataContext);
+
   return (
     <>
     <NavbarContainer container justifyContent="center" height="60px" alignItems="center" position="fixed" zIndex={1} bgcolor="#fff">
@@ -24,7 +33,7 @@ export const Navbar = () => {
                 <Grid item xs={9} height="100%">
                     <Grid container justifyContent="flex-end">
                         <NavLink to={`/cart`}>
-                            <Badge badgeContent={2} color="primary">
+                            <Badge badgeContent={totalCountProduct} color="primary">
                                 <IconButton>
                                     <LocalGroceryStoreOutlinedIcon/>
                                 </IconButton>
