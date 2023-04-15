@@ -7,9 +7,8 @@ import {
   styled,
   Button,
   IconButton,
-  Icon,
 } from "@mui/material";
-import AddIcon from "@mui/icons-material/add";
+import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
 import RemoveIcon from "@mui/icons-material/Remove";
 
 import { DataContext } from "../../context/Context";
@@ -138,7 +137,7 @@ export const CartItem = () => {
                       </IconButton>
                       <ProductAmount> {cantidad} </ProductAmount>
                       <IconButton onClick={() => addToCart(cartItem)}>
-                        <AddIcon />
+                        <AddTwoToneIcon />
                       </IconButton>
                     </ProductAmountContainer>
                     <ProductPrice>
