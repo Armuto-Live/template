@@ -17,7 +17,7 @@ import {
   TitleFooter,
   RightFooter,
   ContactItemFooter,
-} from "../../styles";
+} from "../../styles/index";
 
 // assets
 import Logo from "../../assets/Adidas_Logo.png";

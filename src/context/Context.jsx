@@ -23,7 +23,7 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("https://api.babasdevel.com/invoice/range/0/10/", { headers })
+      .get("https://api.babasdevel.com/invoice/range/0/99/", { headers })
       .then((response) => {
         if (response.status === 200) {
           const results = response.data;
@@ -77,9 +77,7 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  const search=(item)=>{
-    return item.filter((filterProduct)=>(filterProduct.titulo.toLowerCase().includes(data)));
-  }
+  console.log(data);
 
   const value = {
     data,
@@ -90,7 +88,6 @@ export const DataProvider = ({ children }) => {
     totalCountProduct,
     deleteOneProduct,
     deleteProduct,
-    search,
   };
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 };

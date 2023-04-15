@@ -14,7 +14,7 @@ import { FabWhatsapp } from './FabWhatsapp';
 import LogoHome from '../../assets/logo.svg'
 
 //styled components
-import { NavbarContainer } from '../../styles';
+import { NavbarContainer } from '../../styles/index';
 
 
 export const Navbar = () => {
